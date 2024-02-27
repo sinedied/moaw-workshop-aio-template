@@ -11,9 +11,23 @@ This template includes the following:
 
 ### Initial setup
 
+1. Click the `Use this template` button on GitHub to create a new repository from this template.
+2. Name your repository and click `Create repository from template`.
+3. Go to your repository settings, and rename your default branch from `main` to `base`.
 
 ### Creating your workshop
 
+From this point, you can start creating your workshop content in the `base` branch.
+The following are some of the steps you can take to customize your workshop:
+- Update the `docs` folder with your workshop content. See this [link](https://moaw.dev/workshop/create-workshop/?step=2#edit-the-workshop-metadata) for more information on how to author your workshop content.
+- Update the `.devcontainer` folder with your workshop environment.
+- Update the `scripts/create-github-template.sh` script to create the GitHub template for your workshop (see `TODO:` notes in the script).
+- Update the `scripts/create-packages.sh` script to create packages for your workshop (see `TODO:` notes in the script).
+
+To make it easier to edit your workshop docs, you can use the [MOAW CLI](https://github.com/microsoft/moaw/tree/main/packages/cli):
+
+- Run `moaw serve` to preview your workshop content locally, with live reload.
+- Run `moaw link docs/workshop.md` once your workshop is complete to generate a shareable link to your workshop.
 
 ## Contributing
 

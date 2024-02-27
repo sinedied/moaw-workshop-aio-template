@@ -15,3 +15,5 @@ jobs:
         uses: actions/checkout@v3
       - name: Update template
         run: ./scripts/repo/create-github-template.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

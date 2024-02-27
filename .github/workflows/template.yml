@@ -4,7 +4,6 @@ on:
     branches:
       - base
 
-
 jobs:
   update_template:
     name: Update template
@@ -15,7 +14,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Update template
-        run: |
-          git config --global user.name "sinedied"
-          git config --global user.email "noda@free.fr"
-          ./scripts/repo/create-github-template.sh
+        run: ./scripts/repo/create-github-template.sh

@@ -4,22 +4,12 @@
 # Creates the project template and push it to GitHub.
 ##############################################################################
 
-##############################################################################
-# TODO: Update the GitHub repository details
-##############################################################################
-
-GITHUB_ORG=sinedied
-GITHUB_REPO=moaw-workshop-aio-template
-
-##############################################################################
-
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
 cd ../..
 
-TEMPLATE_HOME=/tmp/${GITHUB_REPO}
-GH_USER=$(git config user.name)
-TEMPLATE_REPO=https://$GH_USER:$GITHUB_TOKEN@github.com/${GITHUB_ORG}/${GITHUB_REPO}.git
+TEMPLATE_HOME=/tmp/moaw-template
+TEMPLATE_REPO=https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
 
 echo "Preparing GitHub project template..."
 echo "(temp folder: $TEMPLATE_HOME)"
